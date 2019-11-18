@@ -1,26 +1,26 @@
 # Site Settings
-name: Jekflix
-title: Jekflix | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
+name: LonelyWolf's Blog
+title: LonelyWolf | A blog to record my knowledge
+description: This is LonelyWolf's blog to record knowledges about tech skills and issues.
 tags:
   - blog
   - template
   - jekyll
   - theme
   - netlify
-email: youremail@xyz.com
+email: lonelywolf.lee@gmail.com
 disqus_username: disqus_username
 show_hero: true
 
 
 # Social Media Settings
 # Remove the item if you don't need it
-github_username: github_username
-facebook_username: facebook_username
-twitter_username: twitter_username
-instagram_username: instagram_username
-linkedin_username: linkedin_username
-medium_username: medium_username
+github_username: lonelywolflee
+facebook_username: facenim
+twitter_username: facenim
+instagram_username: lonelywolf.lee
+linkedin_username: lonelywolflee
+# medium_username: medium_username
 
 
 # Theme Settings
