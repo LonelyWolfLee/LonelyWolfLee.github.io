@@ -4,7 +4,7 @@ layout: post
 title: Docker로 GitLab 설치하기
 subtitle: Docker와 GitLab을 사용하여 Private 한 Remote Git Repository 구축하기
 description: >-
-  망이 분리된 환경에서 내부 인원을 위한 Git Repository 운영할 필요가 생겼다.
+  Network 망이 분리된 환경에서 내부 인원을 위한 Git Repository 운영할 필요가 생겼다.
   이런 상황에서 사용하기 좋은 GitLab을 Docker를 이용하여 설치 해보자.
 image: >-
   /assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-0-head-main.png
@@ -20,7 +20,7 @@ author: lonelywolf
 paginate: true
 ---
 
-Git은 **VCS(Version Control System)** 의 일종으로, 소프트워어의 작업 히스토리를 기록하고 그 버전을 관리 하기 위해서 사용되는 **분산 버전 관리 시스템**이다. 현대 소프트웨어 개발 업무에 **소스코드 관리 툴**은 빼놓을수 없는 요소이다.
+Git은 **VCS(Version Control System)** 의 일종으로, File 기반의 작업 히스토리를 기록하고 그 버전을 관리 하기 위해서 사용되는 **분산 버전 관리 시스템**이다. 현대 소프트웨어 개발 업무에 **소스코드 관리 툴**은 빼놓을수 없는 요소이다.
 
 Remote Git Repository을 Hosting 해주는 업체로는 대표적으로 [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), [GitLab](https://gitlab.com/) 등이 있으며, 설치형 Repository 를 제공하는 업체로는 [Bitbucket](https://bitbucket.org/), [GitLab](https://gitlab.com/), 그리고 드물게 윈도우용 설치 패키지를 제공하는 [Gitblit](http://gitblit.com/) 등이 있다.
 
