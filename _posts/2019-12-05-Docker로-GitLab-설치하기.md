@@ -107,4 +107,4 @@ Docker가 정상적으로 실행이 완료 되면(STATUS 가 healthy) 이제 `ht
 
 이제 Private 한 Git Repository를 사용 할 준비가 되었다. 사용법에 대해서는 각자 확인해보자. RTFM.
 
-![Login page](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-4-login-page.png "Login page")
+![Main page](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-5-main-page.png "Main page")
