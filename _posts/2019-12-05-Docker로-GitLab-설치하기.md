@@ -7,9 +7,9 @@ description: >-
   망이 분리된 환경에서 내부 인원을 위한 Git Repository 운영할 필요가 생겼다.
   이런 상황에서 사용하기 좋은 GitLab을 Docker를 이용하여 설치 해보자.
 image: >-
-  /assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기.png
+  /assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-0-head-main.png
 optimized_image: >-
-  /assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-small.png
+  /assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-0-head-small.png
 category: tutorial
 tags:
   - private
@@ -31,6 +31,8 @@ GitLab은 Git의 원격 저장소뿐만 아니라 코드 리뷰, 이슈 트래�
 사용할수 있는 버전은 CE(Community Edition)와 EE(Enterprise Edition)가 있으며 그 차이에 대해서는 [여기](https://about.gitlab.com/install/ce-or-ee/)서 확인할 수 있다. 간단히 말하자면, `CE`는 **MIT Expat license**로 제작된 **Open Source Project**이고, `EE`는 CE와 같은 core에 추가 기능을 구현하여 제공한다고 할 수 있다. 여기 저기 알아본 바로는 CE의 기능만으로 충분히 필요한 만큼 사용할 수 있다고 하므로, 나중에 업그레이드를 하더라도 우선 CE를 설치하는 방향으로 결론을 내렸다.
 
 우선 GitLab을 설치하기 위한 [페이지](https://about.gitlab.com/install/?version=ce)로 들어간다. 다양한 설치방법이 있는데 나는 Docker를 이용한 설치를 하려고 하므로 **Other official installation methods** 항목에서 **Docker**를 찾아서 클릭한다. Docker는 요즘 많이 사용하는 Container System으로, Docker를 사용하면 내가 설치할 장비의 소프트웨어 환경에 영향을 받지 않고 항상 같은 사용 경험을 가지는 환경을 쉽게 설치/제거 할 수 있다. [Official GitLab Docker Image](https://docs.gitlab.com/ce/install/docker.html)에 대한 설명을 볼수 있으며, 내부 링크로 상세한 [설치 및 사용 가이드](https://docs.gitlab.com/omnibus/docker/)를 제공한다.
+
+> Windows 환경은 공식적으로 지원하지 않는다고 **설치 및 사용 가이드** 준비과정에서 언급하고 있다. volume permission 관련 문제들과 그 밖의 알려지지 않은 문제들이 있다고 하면서 [Community Resource](https://about.gitlab.com/get-help/)등을 이용하여 알아서 잘 해결하라고 한다. 나도 volume permission 문제를 해결하지 못하여 Windows 환경에서 할때 `docker-compose.yml`의 `volumes` 부분을 주석 처리하고 구동하였다. 이렇게 하면 백업 등을 할때에 문제가 생길 수 있으므로 테스트 용도로만 사용하자.
 
 Docker를 이용한 설치 방식은 3가지를 제공한다.
 * [Docker Image를 Docker Engine에 직접 실행](https://docs.gitlab.com/omnibus/docker/#run-the-image)
@@ -87,12 +89,22 @@ web:
   </tbody>
 </table>
 
-`docker-compose.yml` 파일의 작성이 끝나고 저장을 하고 나서, 해당 파일이 있는 Directory로 이동한다. (작성 파일과 같은 Directory에 있는지 확인하고) `docker-compose up -d`를 실행하여 GitLab Docker을 시작할 수 있다.
+`docker-compose.yml` 파일의 작성이 끝나고 저장을 하고 나서, 해당 파일이 있는 Directory로 이동한다. (작성 파일과 같은 Directory에 있는지 확인하고) `docker-compose up -d`를 실행하여 GitLab Docker을 시작할 수 있다. `docker ps`를 사용하여 Container가 잘 실행 되고 있는지 확인 할 수 있다.
 
-`docker ps`를 사용하여 Container가 잘 실행 되었음을 확인 할 수 있다
+![Docker run and check image](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-1-docker-run.png "Docker run and check image")
 
-![Docker run and check image](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-docker-run.png "Docker run and check image")
+실행 한 Container에 대한 로그를 확인하고 싶은 경우 (예를 들어 실행 완료가  너무 오랫동안 일어나지 않는 경우) `docker logs -f {CONTAINER NAME}`으로 해당 Container의 로그를 Tracking 할 수 있다.
 
-실행 한 Container에 대한 로그를 확인하고 싶은 경우 (예를 들어 실행 완료가  너무 오랫동안 일어나지 않는 경우) `docker logs {Container Name}`으로 해당 Container의 로그를 확인 할 수 있다.
+![Docker log check image](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-2-docker-logs.png "Docker log check image")
 
-![Docker log check image](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-docker-logs.png "Docker log check image")
+Docker가 정상적으로 실행이 완료 되면(STATUS 가 healthy) 이제 `http://localhost`으로 **localhost**에 위치한 GitLab에 접속 할 수 있다. 처음 웹 환경에 접속을 하게 되면 root 계정에 대한 password를 설정하도록 안내를 한다.
+
+![Setup root password](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-3-setup-root-pw.png "Setup root password")
+
+설정 이후에는 `ID/PW = root / {설정한 pw}`로 접속이 가능하다. `Register` Tab에서 새로운 사용자를 등록 하는 것도 가능하다.
+
+![Login page](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-4-login-page.png "Login page")
+
+이제 Private 한 Git Repository를 사용 할 준비가 되었다. 사용법에 대해서는 각자 확인해보자. RTFM.
+
+![Login page](/assets/img/uploads/2019-12-05/Docker로-GitLab-설치하기-4-login-page.png "Login page")
