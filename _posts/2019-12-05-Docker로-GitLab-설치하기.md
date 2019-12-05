@@ -62,7 +62,7 @@ web:
     - '/srv/gitlab/data:/var/opt/gitlab'
 ```
 
-`GITLAB_OMNIBUS_CONFIG`는 GitLab에서 Docker Image를 만들때 미리 정의해둔 환경변수로, 해당 URL로 GitLab의 **외부 URL**을 설정할 수 있다. 사용하지 않을 경우 해당 설정은 생략 할 수 있다. `volumes`의 경우에 `Host의 경로:Container 내부의 경로`이므로, Host의 경로를 자신의 system 환경에 맞게 잘 작성을 해준다. 각각의 저장소 구성은 아래과 같다.
+`GITLAB_OMNIBUS_CONFIG`는 GitLab에서 Docker Image를 만들때 미리 정의해둔 환경변수로, 해당 URL로 GitLab의 **외부 URL**을 설정할 수 있다. 사용하지 않을 경우 해당 설정은 생략 할 수 있다. `ports`는 `{Host Port}:{Service Port of Container}`이고 `volumes`은 `{Host Path}:{Container Internal Path}`이므로, Host의 설정을 자신의 system 환경에 맞게 잘 작성을 해준다. 각각의 저장소 구성은 아래과 같다.
 
 <table>
   <thead>
