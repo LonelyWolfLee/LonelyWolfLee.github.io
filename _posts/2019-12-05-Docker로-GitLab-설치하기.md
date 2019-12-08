@@ -14,6 +14,7 @@ category: tutorial
 tags:
   - private
   - git
+  - vcs
   - gitlab
   - docker
 author: lonelywolf
