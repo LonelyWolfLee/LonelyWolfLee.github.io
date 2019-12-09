@@ -29,6 +29,8 @@ Remote Git Repository을 Hosting 해주는 업체로는 대표적으로 [GitHub]
 
 GitLab은 Git의 원격 저장소뿐만 아니라 코드 리뷰, 이슈 트래커 기능 및 CI/CD 기능까지 어느 수준까지는 제공을 한다. 설치형 Github라는 컨셉으로 시작된 프로젝트이기 때문에 Github와 비슷한 면이 많다.
 
+### GitLab 설치 및 실행
+
 사용할수 있는 버전은 CE(Community Edition)와 EE(Enterprise Edition)가 있으며 그 차이에 대해서는 [여기][gitlab-ce-or-ee]서 확인할 수 있다. 간단히 말하자면, `CE`는 **MIT Expat license**로 제작된 **Open Source Project**이고, `EE`는 CE와 같은 core에 추가 기능을 구현하여 제공한다고 할 수 있다. 여기 저기 알아본 바로는 CE의 기능만으로 충분히 필요한 만큼 사용할 수 있다고 하므로, 나중에 업그레이드를 하더라도 우선 CE를 설치하는 방향으로 결론을 내렸다.
 
 우선 GitLab을 설치하기 위한 [페이지][gitlab-ce-install]로 들어간다. 다양한 설치방법이 있는데 나는 Docker를 이용한 설치를 하려고 하므로 **Other official installation methods** 항목에서 **Docker**를 찾아서 클릭한다. Docker는 요즘 많이 사용하는 Container System으로, Docker를 사용하면 내가 설치할 장비의 소프트웨어 환경에 영향을 받지 않고 항상 같은 사용 경험을 가지는 환경을 쉽게 설치/제거 할 수 있다. [Official GitLab Docker Image][gitlab-ce-official-docker]에 대한 설명을 볼수 있으며, 내부 링크로 상세한 [설치 및 사용 가이드][gitlab-ce-docker-install]를 제공한다.
@@ -97,6 +99,8 @@ web:
 실행 한 Container에 대한 로그를 확인하고 싶은 경우 (예를 들어 실행 완료가  너무 오랫동안 일어나지 않는 경우) `docker logs -f {CONTAINER NAME}`으로 해당 Container의 로그를 Tracking 할 수 있다.
 
 ![Docker log check image][img-2]
+
+### 설치 확인 및 초기 설정
 
 Docker가 정상적으로 실행이 완료 되면(STATUS 가 healthy) 이제 `http://localhost`으로 **localhost**에 위치한 GitLab에 접속 할 수 있다. 처음 웹 환경에 접속을 하게 되면 root 계정에 대한 password를 설정하도록 안내를 한다.
 
