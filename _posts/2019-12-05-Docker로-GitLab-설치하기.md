@@ -115,7 +115,7 @@ Docker가 정상적으로 실행이 완료 되면(STATUS 가 healthy) 이제 `ht
 ![Main page][img-5]
 
 
-<!-- MARKDOWN LINKS --> 
+<!-- LINKS --> 
 [github-url]: https://github.com/
 [bitbucket-url]: https://bitbucket.org/
 [gitlab-url]: https://gitlab.com/
