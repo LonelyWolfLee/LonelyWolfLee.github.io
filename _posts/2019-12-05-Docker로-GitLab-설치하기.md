@@ -1,5 +1,5 @@
 ---
-date: 2019-12-05T10:16:00.000Z
+date: 2019-12-05 10:16:00
 layout: post
 title: Docker로 GitLab 설치하기
 subtitle: Docker와 GitLab을 사용하여 Private 한 Remote Git Repository 구축하기
