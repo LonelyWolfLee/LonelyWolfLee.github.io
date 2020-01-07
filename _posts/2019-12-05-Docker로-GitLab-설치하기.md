@@ -1,5 +1,5 @@
 ---
-date: 2019-12-05 10:16:00
+date: 2019-12-05T13:00:00+09:00
 layout: post
 title: Docker로 GitLab 설치하기
 subtitle: Docker와 GitLab을 사용하여 Private 한 Remote Git Repository 구축하기
@@ -19,6 +19,7 @@ tags:
   - docker
 author: lonelywolf
 paginate: true
+comments: true
 ---
 
 Git은 **VCS(Version Control System)** 의 일종으로, File 기반의 작업 히스토리를 기록하고 그 버전을 관리 하기 위해서 사용되는 **분산 버전 관리 시스템**이다. 현대 소프트웨어 개발 업무에 **소스코드 관리 툴**은 빼놓을수 없는 요소이다.
