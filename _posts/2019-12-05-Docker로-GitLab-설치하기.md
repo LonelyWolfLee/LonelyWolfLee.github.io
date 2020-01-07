@@ -2,7 +2,7 @@
 date: 2019-12-05T13:00:00+09:00
 layout: post
 title: Docker로 GitLab 설치하기
-subtitle: Docker와 GitLab을 사용하여 Private 한 Remote Git Repository 구축하기
+subtitle: Docker와 GitLab을 사용하여 Private 한 Remote Git Repository 구축
 description: >-
   Network 망이 분리된 환경에서 내부 인원을 위한 Git Repository 운영할 필요가 생겼다.
   이런 상황에서 사용하기 좋은 GitLab을 Docker를 이용하여 설치 해보자.

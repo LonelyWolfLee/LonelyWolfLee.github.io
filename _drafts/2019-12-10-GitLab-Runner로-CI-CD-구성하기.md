@@ -2,7 +2,7 @@
 date: 2020-01-07T10:07:00+09:00
 layout: post
 title: GitLab Runner로 CI/CD 구성하기
-subtitle: GitLab에서 CI(Continuous Integration), CD(Continuous Delivery) 환경을 구성하기
+subtitle: GitLab에서 CI(Continuous Integration), CD(Continuous Delivery) 환경 구성
 description: >-
   지속적 통합과 지속적 배포는 현대 소프트웨어 개발에서 코드 품질 관리를 위해선 빼놓을 수 없는 프로세스이다.
   GitLab에서 Runner를 사용하여 지속적 통합/배포를 위한 환경을 구성하고 실제로 어떻게 적용하는지 알아보자.
