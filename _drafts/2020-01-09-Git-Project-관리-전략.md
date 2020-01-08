@@ -1,5 +1,5 @@
 ---
-date: 2020-01-08T15:50:00+09:00
+date: 2020-01-08T00:00:00+09:00
 layout: post
 title: Git Project 관리 전략
 subtitle: Git flow, GitHub flow, GitLab flow 에 대한 정리
@@ -16,29 +16,55 @@ tags:
   - git-flow
   - github
   - gitlab
+  - workflow
 author: lonelywolf
 paginate: true
 comments: true
 ---
 
-현대 사회에서 가장 보변적으로 언급되는 개발 방법론이 애자일(Agile) 개발 프로세스이다. 애자일 개발 방법론은 비효율적이고 일정 예측이 힘든 무계획적인 개발과, 변경에 느리고 계획 시간에 대한 비용이 많이 드는 계획이 너무 많은 개발(대다수의 고전적 개발 방법들) 사이의 타협점을 잡기 위해 나왔다. 애자일 개발 방법론의 핵심은 개발을 위한 전체 계획을 다 세우고 가는 방식이 아닌, 일정 주기를 가지고 끊임없이 제품 배포버전을 만들어내며 그때그때 요구사항을 추가하거나 수정해나가는 점진적인 방식으로 개발 프로세스를 가져간다는 점이다.
+`Git`으로 효율적으로 협업하고 프로젝트의 관리를 잘 하기 위해서는 적절한 `Branching Strategy`와 `Release Management`가 동반 되어야 한다. 이러한 목적을 달성 하기 위해서 다양한 `Branch Model`이 제안 되었는데, 그 중에 가장 유명한 3개의 Model을 살펴보도록 한다. 작성은 아래의 링크를 참조하였다.
 
-![Compare agile with waterfall][img-1]
-
-
-
-### 태초에는..
-
-### CVS
+* [Git Flow][git-flow]
+* [GitHub Flow][github-flow]
+* [GitLab Flow][gitlab-flow]
 
 
-### SVN
+## Git Flow
+### 설명
+
+![Git Flow Model][img-1]
 
 
-### Git
+
+## GitHub Flow
+### 설명
+
+![GitHub Flow Model][img-2]
+
+## GitLab Flow
+### 설명
+
+#### Production branch with GitLab flow
+
+![Production branch with GitLab flow][img-3]
+
+#### Environment branches with GitLab flow
+
+![Environment branches with GitLab flow][img-4]
+
+#### Release branches with GitLab flow
+
+![Release branches with GitLab flow][img-5]
+
 
 <!-- LINKS -->
-[blog-gitlab-install]: https://lonelywolflee.github.io/Docker%EB%A1%9C-GitLab-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/
-[about-gitlab-ci]: https://about.gitlab.com/product/continuous-integration/
+[git-flow]: https://nvie.com/posts/a-successful-git-branching-model/
+[github-flow]: https://guides.github.com/introduction/flow/
+[gitlab-flow]: https://about.gitlab.com/blog/2014/09/29/gitlab-flow/
 
 <!-- IMAGES -->
+[img-1]: https://nvie.com/img/git-model@2x.png "Git Flow Model"
+[img-2]: https://user-images.githubusercontent.com/6351798/48032310-63842400-e114-11e8-8db0-06dc0504dcb5.png "GitHub Flow Model"
+[img-3]: https://about.gitlab.com/images/git_flow/production_branch.png "Production branch with GitLab flow"
+[img-4]: https://about.gitlab.com/images/git_flow/environment_branches.png "Environment branches with GitLab flow"
+[img-5]: https://about.gitlab.com/images/git_flow/release_branches.png "Release branches with GitLab flow"
