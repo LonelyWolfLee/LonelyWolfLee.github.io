@@ -1,21 +1,21 @@
 ---
 date: 2020-01-08T15:50:00+09:00
 layout: post
-title: Git을 사용한 프로젝트 관리 전략
+title: Git Project 관리 전략
 subtitle: Git flow, GitHub flow, GitLab flow 에 대한 정리
 description: >-
-  우리는 개발 프로젝트를 진행 하기 위해서 Branch 전략과 Release 관리에 대해 잘 생각 해보아야 한다.
+  우리는 개발 Project를 진행 하기 위해서 Branch 전략과 Release 관리에 대해 잘 생각 해보아야 한다.
   이 Post 에서는 가장 유명한 전략인 Git flow, GitHub flow, GitLab flow 를 통해 이를 살펴본다.
 image: >-
-  https://about.gitlab.com/images/ci/ci-cd-test-deploy-illustration_2x.png
+  /assets/img/uploads/2020-01-09/Git-Project-관리-전략-0-head-main.png
 optimized_image: >-
-  https://assets.gitlab-static.net/uploads/-/system/project/avatar/15677351/runner_logo.png
+  /assets/img/uploads/2020-01-09/Git-Project-관리-전략-0-head-small.png
 category: technology
 tags:
-  - private
   - git
   - git-flow
-  - branching
+  - github
+  - gitlab
 author: lonelywolf
 paginate: true
 comments: true
