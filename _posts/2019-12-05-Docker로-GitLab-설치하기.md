@@ -68,7 +68,7 @@ web:
     - "/srv/gitlab/data:/var/opt/gitlab"
 ```
 
-원래 GitLab의 설정을 변경 하기 위해서는 docker가 실행된 다음, 해당 docker 내부의 `gitlab.rb`파일을 변경 해야 한다. ([설명][gitlab-docker-configuration]) 하지만 `GITLAB_OMNIBUS_CONFIG`라는 GitLab에서 Docker Image를 만들때 미리 정의해둔 환경변수를 사용하여 해당 파일 안에 있는 설정을 리스트 형태로 정의하여 손쉽게 설정을 할 수 있다. 위의 예시에서는 **docker-compose** 에서 `https://gitlab.example.com`을 GitLab의 **외부 접속 URL**로 설정하고, [LFS(Large File Storage)][gitlab-lfs-url]을 활성화 시키도록 설정 하였다. 사용하지 않을 경우 해당 설정은 생략 할 수 있다. `ports`는 `{Host Port}:{Service Port of Container}`이고 `volumes`은 `{Host Path}:{Container Internal Path}`이므로, Host의 설정을 자신의 system 환경에 맞게 잘 작성을 해준다. 각각의 저장소 구성은 아래과 같다.
+원래 GitLab의 설정을 변경 하기 위해서는 docker가 실행된 다음, 해당 docker 내부의 `gitlab.rb`파일을 변경 해야 한다([관련 설명은 여기에서..][gitlab-docker-configuration]). 하지만 `GITLAB_OMNIBUS_CONFIG` 라는 GitLab에서 Docker Image를 만들때 미리 정의해둔 환경변수를 사용하여 해당 파일 안에 있는 설정을 리스트 형태로 정의하여 손쉽게 설정을 할 수 있다. 위의 예시에서는 **docker-compose** 에서 `https://gitlab.example.com`을 GitLab의 **외부 접속 URL**로 설정하고, [LFS(Large File Storage)][gitlab-lfs-url]을 활성화 시키도록 설정 하였다. 사용하지 않을 경우 해당 설정은 생략 할 수 있다. `ports`는 `{Host Port}:{Service Port of Container}`이고 `volumes`은 `{Host Path}:{Container Internal Path}`이므로, Host의 설정을 자신의 system 환경에 맞게 잘 작성을 해준다. 각각의 저장소 구성은 아래과 같다.
 
 <table>
   <thead>
