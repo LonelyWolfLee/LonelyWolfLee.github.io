@@ -12,6 +12,7 @@ email: lonelywolf.lee@gmail.com
 disqus_username: lonelywolflee
 show_hero: true
 categories_folder: category
+sent_message_url: "/contact/message-sent/"
 menu:
   - title: Home
     url: /
