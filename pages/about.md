@@ -3,7 +3,6 @@ layout: page
 title: About
 description: Something abount me.
 permalink: /about/
-menu: true
 ---
 
 <img class="img-rounded" src="/assets/img/uploads/profile.png" alt="Thiago Rossener" width="200">
