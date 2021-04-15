@@ -8,8 +8,6 @@ tags:
   - jekyll
   - theme
   - netlify
-email: lonelywolf.lee@gmail.com
-disqus_username: lonelywolflee
 show_hero: true
 menu:
   - title: Home
@@ -20,7 +18,12 @@ menu:
     url: /contact
   - title: Feed
     url: /feed.xml
-
+email: lonelywolf.lee@gmail.com
+# See: https://disqus.com/
+disqus_username: lonelywolflee
+# Contact Form Setting
+# See: https://formspree.io/
+formspree_form_id: lonelywolf.lee@gmail.com
 # Social Media Settings
 # Remove the item if you don't need it
 github_username: lonelywolflee
